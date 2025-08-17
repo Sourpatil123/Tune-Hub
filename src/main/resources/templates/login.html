@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TuneHub</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Floating glowing bubbles for music effect */
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .bubbles span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: bubble 20s linear infinite;
+            bottom: -150px;
+        }
+        .bubbles span:nth-child(1) { left: 10%; width: 40px; height: 40px; animation-delay: 0s; }
+        .bubbles span:nth-child(2) { left: 20%; width: 20px; height: 20px; animation-delay: 2s; }
+        .bubbles span:nth-child(3) { left: 25%; width: 50px; height: 50px; animation-delay: 4s; }
+        .bubbles span:nth-child(4) { left: 40%; width: 25px; height: 25px; animation-delay: 6s; }
+        .bubbles span:nth-child(5) { left: 70%; width: 60px; height: 60px; animation-delay: 8s; }
+        @keyframes bubble {
+            0% { transform: translateY(0); opacity: 0; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-800px); opacity: 0; }
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.65);
+            padding: 40px 30px;
+            border-radius: 15px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease;
+            z-index: 2;
+        }
+        .login-container:hover { transform: scale(1.03); }
+        h2 { color: #ffdf6c; margin-bottom: 20px; }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+            background: #3c3c3c;
+            color: #fff;
+        }
+        input:focus {
+            border: 2px solid #ffdf6c;
+            background: #222;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #ffdf6c;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        button:hover { background: #ffc107; transform: scale(1.05); }
+        .links { margin-top: 15px; font-size: 14px; }
+        .links a { color: #ffdf6c; text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="bubbles">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="links">
+            <p>Don't have an account? <a href="/map-register">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>

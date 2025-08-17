@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneHub - Music for Everyone</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0d0d0d, #222831, #393e46);
+            color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 40px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            font-size: 36px;
+            color: #ffd369;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 50px 20px 20px;
+        }
+        .hero h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #ffd369;
+        }
+        .hero p {
+            font-size: 16px;
+            margin-top: 8px;
+            color: #e0e0e0;
+        }
+
+        /* LOGIN / REGISTER BOX */
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Increased space between boxes */
+            margin: 25px 0 15px;
+        }
+        .auth-box {
+            width: 200px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 204, 112, 0.5);
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .auth-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(255, 204, 112, 0.4);
+        }
+        .auth-box h3 {
+            color: #ffd369;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .auth-box button {
+            padding: 8px 15px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            border-radius: 20px;
+            background: #ffd369;
+            color: #000;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .auth-box button:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 26px;
+            margin: 25px 0 15px;
+            color: #ffd369;
+        }
+
+        /* TRENDING CAROUSEL */
+        .trending-container {
+            overflow: hidden;
+            position: relative;
+            padding: 15px 0;
+        }
+        .trending-carousel {
+            display: flex;
+            gap: 20px;
+            padding: 0 20px;
+            animation: slide 20s linear infinite;
+        }
+        .song-card {
+            min-width: 200px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            font-size: 45px;
+        }
+        .song-card:hover {
+            transform: scale(1.05);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .song-card p {
+            font-size: 16px;
+            margin: 8px 0 0;
+            color: #ffd369;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎵 TuneHub</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to TuneHub</h2>
+        <p>Discover trending music, curated playlists, and more. Register to unlock all features!</p>
+    </section>
+
+    <!-- LOGIN AND REGISTER BOXES -->
+    <div class="auth-container">
+        <div class="auth-box">
+            <h3>Login</h3>
+            <button onclick="window.location.href='/map-login'">Login</button>
+        </div>
+        <div class="auth-box">
+            <h3>Register</h3>
+            <button onclick="window.location.href='/map-register'">Register</button>
+        </div>
+    </div>
+
+    <h2 class="section-title">🔥 Trending Now</h2>
+    <section class="trending-container">
+        <div class="trending-carousel">
+            <div class="song-card">🎧<p>Top Hits 2025</p></div>
+            <div class="song-card">🎶<p>EDM Vibes</p></div>
+            <div class="song-card">🎸<p>Acoustic Chill</p></div>
+            <div class="song-card">🎤<p>Pop Culture</p></div>
+            <div class="song-card">🥁<p>Rock Legends</p></div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 TuneHub. All rights reserved.
+    </footer>
+</body>
+</html>

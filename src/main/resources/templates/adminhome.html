@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab); /* Same as index.html */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+            color: #ffd369; /* Accent color */
+            margin: 10px 0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .emoji-title {
+            font-size: 44px;
+        }
+
+        .admin-panel {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .panel-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            width: 220px;
+            text-align: center;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .panel-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 4px 20px rgba(255, 211, 105, 0.5);
+        }
+
+        .panel-card .icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .panel-card span {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            color: #ffd369; /* Accent text color */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="emoji-title">👑 Welcome Admin</h1>
+    <h1>Manage Your Music World</h1>
+
+    <div class="admin-panel">
+        <div class="panel-card" onclick="location.href='map-songs'">
+            <div class="icon">➕🎼</div>
+            <span>Add Songs</span>
+        </div>
+        <div class="panel-card" onclick="location.href='map-viewsongs'">
+            <div class="icon">🎧🎵</div>
+            <span>View Songs</span>
+        </div>
+        <div class="panel-card" onclick="location.href='map-createplaylist'">
+            <div class="icon">🎶📂</div>
+            <span>Create Playlist</span>
+        </div>
+    </div>
+</body>
+</html>

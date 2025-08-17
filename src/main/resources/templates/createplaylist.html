@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Playlist</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            margin: 60px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #ffd369;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="text"] {
+            width: 85%;
+            padding: 12px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        h3 {
+            margin: 15px 0 10px;
+            color: #ffd369;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin: 10px auto;
+            display: inline-block;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 8px;
+        }
+
+        button {
+            padding: 12px 30px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 30px;
+            background: #ffd369;
+            color: #000;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 211, 105, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎵 Create Playlist</h2>
+        <form action="addplaylist" method="post">
+            <input type="text" name="name" placeholder="Playlist Name" required>
+            <h3>Select Songs:</h3>
+            <ul>
+                <!-- Example dynamic list -->
+                <li><input type="checkbox" name="songs" value="1"> Song 1</li>
+                <li><input type="checkbox" name="songs" value="2"> Song 2</li>
+                <li><input type="checkbox" name="songs" value="3"> Song 3</li>
+            </ul>
+            <button type="submit">Create Playlist</button>
+        </form>
+    </div>
+</body>
+</html>

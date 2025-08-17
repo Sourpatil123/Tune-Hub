@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Song Added</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            margin: 100px auto;
+            padding: 40px;
+            max-width: 450px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #2ecc71;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            background: #ffd369;
+            border: none;
+            color: #000;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 211, 105, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ Song Added Successfully!</h1>
+        <button class="btn" onclick="location.href='map-songs'">Add Another Song</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Songs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            padding: 30px;
+            width: 400px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #ffd369;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 5px #ffd369;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin-top: 15px;
+            background: #ffd369;
+            border: none;
+            border-radius: 30px;
+            color: #000;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 211, 105, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎵 Add New Song</h2>
+        <form action="addsongs" method="post">
+            <input type="text" name="name" placeholder="Song Name" required><br>
+            <input type="text" name="artist" placeholder="Artist" required><br>
+            <input type="text" name="genre" placeholder="Genre" required><br>
+            <input type="text" name="link" placeholder="Song Link (URL)" required><br>
+            <button type="submit">Add Song</button>
+        </form>
+    </div>
+</body>
+</html>
